@@ -16,7 +16,7 @@ This application uses the MyAnimeList API but is not endorsed or certified by My
 - **HTML**: The basic structure of the app is built using HTML.
 - **CSS**: Styling and layout are handled using CSS.
 - **JavaScript**: The app uses JavaScript to interact with the AniList API, handle user input, and dynamically update the UI.
-**Django**: The web application is built using the Django framework, providing a robust backend structure.
+- **Django**: The web application is built using the Django framework, providing a robust backend structure.
 
 ## Setup
 
