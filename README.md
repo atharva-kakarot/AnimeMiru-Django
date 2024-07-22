@@ -1,3 +1,6 @@
+# Disclaimer
+Disclaimer: This application uses the MyAnimeList API but is not endorsed or certified by MyAnimeList. All data provided by the API is owned by MyAnimeList and is used here under their terms of service. For more information, please visit MyAnimeList's official website.
+
 # AnimeMiru App
 **AnimeMiru** is a simple web application that allows users to explore and discover information about their favourite anime series. It leverages the **MyAnimeList API**, which provides anime-related data.
 
