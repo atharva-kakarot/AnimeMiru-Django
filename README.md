@@ -14,3 +14,12 @@
 - **CSS**: Styling and layout are handled using CSS.
 - **JavaScript**: The app uses JavaScript to interact with the AniList API, handle user input, and dynamically update the UI.
 **Django**: The web application is built using the Django framework, providing a robust backend structure.
+
+## Setup
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/atharva-kakarot/AnimeMiru-MAL.git
