@@ -385,7 +385,7 @@ body {
     transition: 0.5s;
 }
 
-.anime-image, .image-div, #main-image {
+.anime-image, .image-div, #main-image, #main-image-div {
     width: 400px;
     height: fit-content;
     border-radius: 10px;
