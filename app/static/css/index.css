@@ -385,16 +385,10 @@ body {
     transition: 0.5s;
 }
 
-.anime-image, .image-div {
+.anime-image, .image-div, #main-image {
     width: 400px;
     height: fit-content;
     border-radius: 10px;
-}
-
-#banner-image {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 #anime-stats-div {
@@ -405,13 +399,6 @@ body {
     margin: 20px 0px;
     margin-right: 20px;
     background-color: rgb(40, 40, 40);
-}
-
-#trailer-link {
-    margin: 0px 20px;
-    margin-left: 0px;
-    border: none;
-    border-radius: 20px;
 }
 
 #anime-details-div {
