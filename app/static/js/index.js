@@ -34,6 +34,18 @@ topPreviousBtn.addEventListener("click", function () {
     topDiv.scrollLeft -= 400;
 });
 
+const movieNextBtn = document.getElementById("next-anime-movie");
+const moviePreviousBtn = document.getElementById("previous-anime-movie");
+const movieDiv = document.getElementById("anime-movie-container");
+
+movieNextBtn.addEventListener("click", function () {
+    movieDiv.scrollLeft += 400;
+});
+
+moviePreviousBtn.addEventListener("click", function () {
+    movieDiv.scrollLeft -= 400;
+});
+
 document.body.addEventListener("click", function (event) {
     if (!event.target.closest("#search-button")) {
         container.innerHTML = "";

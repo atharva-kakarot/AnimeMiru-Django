@@ -19,31 +19,39 @@ def index(request):
     current_year = datetime.now().year
 
     headers = {'X-MAL-CLIENT-ID': creds.API_KEY}
-    response = requests.get(f'https://api.myanimelist.net/v2/anime/season/{current_year}/{get_season()}?sort=anime_num_list_users&fields=mean', headers=headers)
+    response = requests.get(f'https://api.myanimelist.net/v2/anime/season/{current_year}/{get_season()}?sort=anime_num_list_users&fields=mean&limit=100', headers=headers)
     
     if response.status_code == 200:
         airing_now_data = response.json()
     else:
         print(f"Error: {response.status_code}")
     
-    response = requests.get(f'https://api.myanimelist.net/v2/anime/ranking?fields=mean', headers=headers)
+    response = requests.get(f'https://api.myanimelist.net/v2/anime/ranking?fields=mean&limit=100', headers=headers)
     
     if response.status_code == 200:
         top_anime_data = response.json()
     else:
         print(f"Error: {response.status_code}")
     
-    response = requests.get(f'https://api.myanimelist.net/v2/anime/ranking?ranking_type=bypopularity&fields=mean', headers=headers)
+    response = requests.get(f'https://api.myanimelist.net/v2/anime/ranking?ranking_type=bypopularity&fields=mean&limit=100', headers=headers)
     
     if response.status_code == 200:
         popular_anime_data = response.json()
+    else:
+        print(f"Error: {response.status_code}")
+    
+    response = requests.get(f'https://api.myanimelist.net/v2/anime/ranking?ranking_type=movie&fields=mean&limit=100', headers=headers)
+    
+    if response.status_code == 200:
+        anime_movie = response.json()
     else:
         print(f"Error: {response.status_code}")
         
     context = {
         'airing_now_data': airing_now_data,
         'top_anime_data': top_anime_data,
-        'popular_anime_data': popular_anime_data
+        'popular_anime_data': popular_anime_data,
+        'anime_movie': anime_movie
         }
     
     return render(request, 'index.html', context)

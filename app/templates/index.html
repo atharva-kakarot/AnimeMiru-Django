@@ -109,6 +109,31 @@
                 </a>
                 {% endfor %}
             </div>
+            <div class="header-and-buttons">
+                <h1 id="anime-movie-header"><i class="fa-solid fa-film" style="color: purple;"></i>&nbsp;&nbsp;TOP ANIME MOVIES
+                </h1>
+                <div class="scroll-buttons">
+                    <button class="scroll-buttons" id="previous-anime-movie"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                    <button class="scroll-buttons" id="next-anime-movie"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div id="anime-movie-container">
+                {% for anime_movie in anime_movie.data %}
+                <a href="anime/id={{anime_movie.node.id}}" class="anime-card-links">
+                    <div class="anime-cards">
+                        <img src={{anime_movie.node.main_picture.large}} class="image">
+                        <p class="anime-title">{{anime_movie.node.title}}</p>
+                        <table class="airing-now-details-table">
+                            <tr>
+                                <td><i class="fa-solid fa-star" style="color: gold"></i>&nbsp;{{anime_movie.node.mean}}</td>
+                            </tr>
+                        </table>
+                </div>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </center>
 </body>
