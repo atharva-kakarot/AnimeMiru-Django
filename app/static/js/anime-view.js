@@ -110,6 +110,18 @@ searchBtn.addEventListener("click", () => {
     }
 });
 
+const carouselLeftBtn = document.getElementById("carousel-left-button");
+const carouselRightBtn = document.getElementById("carousel-right-button");
+const imageContainer = document.getElementById("image-container");
+
+carouselLeftBtn.addEventListener("click", function() {
+    imageContainer.scrollLeft -= 400;
+});
+
+carouselRightBtn.addEventListener("click", function() {
+    imageContainer.scrollLeft += 400;
+});
+
 document.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         searchBtn.click();

@@ -55,12 +55,16 @@
             </div>
             <div id="anime-outermost-details-div">
                 <div id="anime-details-main-div">
-                    <div id="image-container">
-                        {% for picture in anime_data.pictures %}
-                        <div class-"image-div">
+                    <div id="carousel">
+                        <i class="fa-solid fa-chevron-left" id="carousel-left-button"></i>
+                        <div id="image-container">
+                            {% for picture in anime_data.pictures %}
+                            <div class-"image-div">
                             <img src={{picture.large}} class="anime-image">
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
+                        <i class="fa-solid fa-chevron-right" id="carousel-right-button"></i>
                     </div>
                     <div id="anime-stats-trailer-div">
                         <div id="anime-stats-div">
