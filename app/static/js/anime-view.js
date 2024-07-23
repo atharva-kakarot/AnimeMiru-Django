@@ -29,26 +29,35 @@ function animeContainer(str) {
 
     str.node.media_type = format[str.node.media_type] || str.node.media_type;
 
+    function nullfunc(data) {
+        if (!data) {
+            return "N/A"
+        }
+        else {
+            return data
+        }
+    }
+
     const details = document.createElement("div");
     details.classList.add("search-anime-details");
     details.innerHTML = `
     <h1 class="search-anime-title">${str.node.title}</h1>
     <table style="margin-left: 7px; height: 100px" class="search-anime-details-table">
     <tr>
-    <td><i class="fa-solid fa-tv"></i>&nbsp;&nbsp;${str.node.media_type} (${str.node.num_episodes} Episodes)</td>
+    <td><i class="fa-solid fa-tv"></i>&nbsp;&nbsp;${nullfunc(str.node.media_type)} (${nullfunc(str.node.num_episodes)} Episodes)</td>
     </tr>
     <tr>
     <td>
     <div class="search-anime-details-main-div">
     <i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;
     <div class="search-anime-details-div">
-    ${str.node.start_date} to ${str.node.end_date}
+    ${nullfunc(str.node.start_date)} to ${nullfunc(str.node.end_date)}
     </div>
     </div>
     </td>
     </tr>
     <tr>
-    <td><i class="fa-solid fa-star" style="color: gold"></i>&nbsp;&nbsp;${str.node.mean}</td>
+    <td><i class="fa-solid fa-star" style="color: gold"></i>&nbsp;&nbsp;${nullfunc(str.node.mean)}</td>
     </tr>
     </table>`
 
