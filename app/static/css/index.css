@@ -350,11 +350,34 @@ body {
     border-radius: 10px;
 }
 
-#anime-image {
+#image-container {
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    overflow-x: scroll;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+#image-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+#image-container::-webkit-scrollbar-track {
+    background: rgb(40, 40, 40);
+}
+
+#image-container::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+    border-radius: 20px;
+}
+
+.anime-image, .image-div {
     width: 400px;
     height: fit-content;
-    float: left;
-    margin: 20px;
     border-radius: 10px;
 }
 

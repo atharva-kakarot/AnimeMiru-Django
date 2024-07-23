@@ -59,7 +59,7 @@ def index(request):
 
 def index_two(request, anime_id):
     headers = {'X-MAL-CLIENT-ID': creds.API_KEY}
-    response = requests.get(f'https://api.myanimelist.net/v2/anime/{anime_id}?fields=alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,media_type,status,genres,rating,average_episode_duration,studios,related_anime,num_episodes,source,start_season,num_scoring_users', headers=headers)
+    response = requests.get(f'https://api.myanimelist.net/v2/anime/{anime_id}?fields=alternative_titles,pictures,start_date,end_date,synopsis,mean,rank,popularity,media_type,status,genres,rating,average_episode_duration,studios,related_anime,num_episodes,source,start_season,num_scoring_users', headers=headers)
     
     if response.status_code == 200:
         anime_data = response.json()

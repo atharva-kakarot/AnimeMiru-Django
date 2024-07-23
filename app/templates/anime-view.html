@@ -55,7 +55,13 @@
             </div>
             <div id="anime-outermost-details-div">
                 <div id="anime-details-main-div">
-                    <img src={{anime_data.main_picture.large}} id="anime-image">
+                    <div id="image-container">
+                        {% for picture in anime_data.pictures %}
+                        <div class-"image-div">
+                            <img src={{picture.large}} class="anime-image">
+                        </div>
+                        {% endfor %}
+                    </div>
                     <div id="anime-stats-trailer-div">
                         <div id="anime-stats-div">
                             <h1 id="stats-header">Statistics</h1>
