@@ -72,7 +72,9 @@ function animeContainer(str) {
         "movie": "Movie",
         "special": "Special",
         "ona": "ONA",
-        "music": "Music"
+        "music": "Music",
+        "tv_special": "TV Special",
+        "pv": "PV"
     }
 
     str.node.media_type = format[str.node.media_type] || str.node.media_type;
