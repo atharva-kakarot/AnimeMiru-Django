@@ -53,7 +53,6 @@ def index(request):
         'popular_anime_data': popular_anime_data,
         'anime_movie': anime_movie
         }
-    
     return render(request, 'index.html', context)
     
 
@@ -104,7 +103,7 @@ def index_two(request, anime_id):
         episodes = anime_data["num_episodes"]
     except:
         episodes = "N/A"
-         
+          
     try:
         ratings = {
         "g": "G - All Ages",
@@ -128,7 +127,6 @@ def index_two(request, anime_id):
         'season': season,
         'rating': rating,
     }
-        
     return render(request, 'anime-view.html', context)
 
 def index_three(request, search_query):
