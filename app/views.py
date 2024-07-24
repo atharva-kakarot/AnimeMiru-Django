@@ -104,8 +104,7 @@ def index_two(request, anime_id):
         episodes = anime_data["num_episodes"]
     except:
         episodes = "N/A"
-        
-        
+         
     try:
         ratings = {
         "g": "G - All Ages",
