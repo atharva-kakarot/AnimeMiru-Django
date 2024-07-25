@@ -44,7 +44,11 @@
                     </tr>
                     <tr>
                         <td>English:</td>
+                        {% if anime_data.alternative_titles.en == "" %}
+                        <td><span id="anime-title-eng">N/A</span></td>
+                        {% else %}
                         <td><span id="anime-title-eng">{{anime_data.alternative_titles.en}}</span></td>
+                        {% endif %}
                     </tr>
                 </table>
                 <div id="genre-div">
