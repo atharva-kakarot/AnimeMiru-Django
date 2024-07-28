@@ -5,6 +5,7 @@ This application uses the MyAnimeList API but is not endorsed or certified by My
 **AnimeMiru** is a simple web application that allows users to explore and discover information about their favourite anime series. It leverages the **MyAnimeList API**, which provides anime-related data.
 
 ![AnimeMiru App](screenshot/screenshot.jpeg)
+![AnimeMiru App](screenshot/screenshot2.jpeg)
 
 ## Features
 
