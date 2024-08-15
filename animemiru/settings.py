@@ -47,7 +47,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'animemiru.wsgi.application'
+WSGI_APPLICATION = 'animemiru.wsgi.app'
 
 DATABASES = {
     'default': {
