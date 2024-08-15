@@ -2,7 +2,10 @@ from django.shortcuts import render
 import requests
 from datetime import datetime
 import math
-import creds
+import os
+from dotenv import load_dotenv
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 def index(request):
     def get_season():
@@ -18,7 +21,7 @@ def index(request):
 
     current_year = datetime.now().year
 
-    headers = {'X-MAL-CLIENT-ID': creds.API_KEY}
+    headers = {'X-MAL-CLIENT-ID': API_KEY}
     response = requests.get(f'https://api.myanimelist.net/v2/anime/season/{current_year}/{get_season()}?sort=anime_num_list_users&fields=mean&limit=100', headers=headers)
     
     if response.status_code == 200:
@@ -57,7 +60,7 @@ def index(request):
     
 
 def index_two(request, anime_id):
-    headers = {'X-MAL-CLIENT-ID': creds.API_KEY}
+    headers = {'X-MAL-CLIENT-ID': API_KEY}
     response = requests.get(f'https://api.myanimelist.net/v2/anime/{anime_id}?fields=alternative_titles,pictures,start_date,end_date,synopsis,mean,rank,popularity,media_type,status,genres,rating,average_episode_duration,studios,related_anime,num_episodes,source,start_season,num_scoring_users', headers=headers)
     
     if response.status_code == 200:
@@ -131,7 +134,7 @@ def index_two(request, anime_id):
 
 def index_three(request, search_query):
     from django.http import JsonResponse
-    headers = {'X-MAL-CLIENT-ID': creds.API_KEY}
+    headers = {'X-MAL-CLIENT-ID': API_KEY}
     response = requests.get(f'https://api.myanimelist.net/v2/anime?q={search_query}&fields=mean,media_type,num_episodes,start_date,end_date', headers=headers)
     if response.status_code == 200:
         data = response.json()
